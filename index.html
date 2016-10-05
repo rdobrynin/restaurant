@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <link rel="stylesheet" href="dest/css/main.css">
+    <script>
+    </script>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+                <a href="javascript:void(0);" data-dismiss="modal" class="close-button"></a>
+                <a href="javascript:void(0)">create new</a>
+                <ul class="nav nav-tabs" id="tabContent">
+                    <li class="active"><a href="#reservation-content" data-toggle="tab">reservation</a></li>
+                    <li class=""><a href="#walk-in-content" data-toggle="tab">walk-in</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="reservation-content">
+                    <div class="modal-body">
+                        <div class="search">
+                            <input type="text" placeholder="Search by guest name or mobile" id="search">
+                            <a href="javascript:void(0);" class="btn btn-add" id="addContact">+</a>
+                        </div>
+                        <div class="reservation-wrapper">
+                            <div class="reservation-details">
+                        <div class="content">
+                            <h4>Reservation Details</h4>
+                        </div>
+                            </div>
+                            <div class="table-details">
+                             <div class="content">
+                                 <h4>Table Details</h4>
+                                 <table class="table">
+                                     <thead>
+                                     <tr>
+                                         <th>#</th>
+                                         <th>First Name</th>
+                                         <th>Last Name</th>
+                                         <th>Username</th>
+                                         <th>Actions</th>
+                                     </tr>
+                                     </thead>
+                                     <tbody>
+                                     <tr>
+                                         <th scope="row">1</th>
+                                         <td>Abby</td>
+                                         <td>Barrett</td>
+                                         <td>@abbeme</td>
+                                         <td>
+                                             <a class="blue-text"><i class="fa fa-user"></i></a>
+                                             <a class="teal-text"><i class="fa fa-pencil"></i></a>
+                                             <a class="red-text"><i class="fa fa-times"></i></a>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th scope="row">2</th>
+                                         <td>Danny</td>
+                                         <td>Collins</td>
+                                         <td>@dennis</td>
+                                         <td>
+                                             <a class="blue-text"><i class="fa fa-user"></i></a>
+                                             <a class="teal-text"><i class="fa fa-pencil"></i></a>
+                                             <a class="red-text"><i class="fa fa-times"></i></a>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th scope="row">3</th>
+                                         <td>Clara</td>
+                                         <td>Ericson</td>
+                                         <td>@claris</td>
+                                         <td>
+                                             <a class="blue-text"><i class="fa fa-user"></i></a>
+                                             <a class="teal-text"><i class="fa fa-pencil"></i></a>
+                                             <a class="red-text"><i class="fa fa-times"></i></a>
+                                         </td>
+                                     </tr>
+
+                                     </tbody>
+                                 </table>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default">reset</button>
+                        <button type="button" class="btn btn-primary">create reservation</button>
+                    </div>
+            </div>
+                <div class="tab-pane" id="walk-in-content">
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-main="dest/js/main.min.js" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>
