@@ -5899,6 +5899,21 @@ label.btn.btn-primary {
   label.btn.btn-primary:focus.active, label.btn.btn-primary:hover.active {
     border-color: #0070c9 !important; }
 
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 22px;
+  padding: 5px 22px 5px 10px;
+  position: relative;
+  margin-right: 7px; }
+  .label a.remove-filter {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: transparent url(../../images/sprite.svg) -115px -115px no-repeat;
+    background-size: 355px 192px; }
+
 .modal .modal-dialog {
   width: 95%; }
   @media (min-width: 1200px) {
@@ -6021,6 +6036,9 @@ label.btn.btn-primary {
     border-color: #dedede;
     border-width: 2px;
     color: #cacaca; }
+    @media (max-width: 350px) {
+      .modal-footer .btn {
+        padding: 10px; } }
     .modal-footer .btn.btn-primary {
       background-color: #fff;
       color: #0070c9; }
@@ -6098,6 +6116,44 @@ label.btn.btn-primary {
     text-transform: uppercase;
     color: #d2d2d2;
     font-weight: 600; }
+
+.filter, .sort {
+  height: 100%;
+  padding: 15px 22px;
+  position: relative;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5; }
+  .filter .title, .sort .title {
+    padding-right: 15px; }
+
+.filter {
+  border-bottom: 1px solid #e5e5e5; }
+
+.sort span {
+  margin-right: 90px;
+  text-transform: capitalize; }
+  .sort span a.sort-trigger {
+    top: 23px;
+    position: absolute;
+    text-indent: -9999em; }
+    .sort span a.sort-trigger.up:after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      right: -16px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #0070c9; }
+    .sort span a.sort-trigger.down:after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      right: -16px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #0070c9; }
 
 textarea {
   resize: none !important;

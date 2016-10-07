@@ -1,0 +1,16 @@
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 22px;
+  padding: 5px 22px 5px 10px;
+  position: relative;
+  margin-right: 7px;
+  a.remove-filter {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: transparent url(#{$image-url}/sprite.svg) -115px -115px no-repeat;
+    background-size: 355px 192px;
+  }
+}

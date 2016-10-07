@@ -15,3 +15,56 @@
     font-weight: 600;
   }
 }
+
+.filter, .sort {
+  height: 100%;
+  padding: 15px 22px;
+  position: relative;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  .title {
+    padding-right: 15px;
+  }
+}
+
+.filter {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.sort {
+  span {
+    margin-right: 90px;
+    text-transform: capitalize;
+    a {
+      &.sort-trigger {
+        top: 23px;
+        position: absolute;
+        text-indent: -9999em;
+       &.up {
+         &:after {
+           position: absolute;
+           content: '';
+           width: 0;
+           height: 0;
+           right: -16px;
+           border-left: 5px solid transparent;
+           border-right: 5px solid transparent;
+           border-top: 5px solid $active-color;
+         }
+       }
+        &.down {
+          &:after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            right: -16px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid $active-color;
+          }
+        }
+      }
+    }
+  }
+}
