@@ -1,0 +1,47 @@
+.search {
+  padding: 15px;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: transparent url(#{$image-url}/sprite.svg) -12px -11px no-repeat;
+    background-size: 355px 192px;
+    left: 20px;
+    top: 14px;
+  }
+  input[type="text"] {
+    width: 90%;
+    line-height: 25px;
+    padding-left: 45px;
+    border: 0;
+    font-size: 16px;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  ::-webkit-input-placeholder {
+    color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  :-ms-input-placeholder {
+    color: #d6d6d6;
+    font-size: 18px;
+    font-weight: 200;
+  }
+}

@@ -1,0 +1,17 @@
+.modal-footer {
+  background-color: $bg-table-color;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: 0;
+  padding: 20px 25px;
+  .btn {
+    border-color: #dedede;
+    border-width: 2px;
+    color: $disabled-text-color;
+    &.btn-primary {
+      background-color: #fff;
+      color: $active-color;
+    }
+  }
+
+}

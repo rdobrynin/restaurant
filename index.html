@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Restaurant Dashboard UI</title>
     <link rel="stylesheet" href="dest/css/main.css">
     <script>
     </script>
@@ -14,7 +16,7 @@
 <!-- Button trigger modal -->
 
 <!-- Modal -->
-<div class="modal" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal" id="myModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -31,74 +33,174 @@
                     <div class="modal-body">
                         <div class="search">
                             <input type="text" placeholder="Search by guest name or mobile" id="search">
-                            <a href="javascript:void(0);" class="btn btn-add" id="addContact">+</a>
+                            <a href="javascript:void(0);" class="btn btn-round btn-add"></a>
                         </div>
-                        <div class="reservation-wrapper">
-                            <div class="reservation-details">
-                        <div class="content">
-                            <h4>Reservation Details</h4>
-                        </div>
-                            </div>
-                            <div class="table-details">
-                             <div class="content">
-                                 <h4>Table Details</h4>
-                                 <table class="table">
-                                     <thead>
-                                     <tr>
-                                         <th>#</th>
-                                         <th>First Name</th>
-                                         <th>Last Name</th>
-                                         <th>Username</th>
-                                         <th>Actions</th>
-                                     </tr>
-                                     </thead>
-                                     <tbody>
-                                     <tr>
-                                         <th scope="row">1</th>
-                                         <td>Abby</td>
-                                         <td>Barrett</td>
-                                         <td>@abbeme</td>
-                                         <td>
-                                             <a class="blue-text"><i class="fa fa-user"></i></a>
-                                             <a class="teal-text"><i class="fa fa-pencil"></i></a>
-                                             <a class="red-text"><i class="fa fa-times"></i></a>
-                                         </td>
-                                     </tr>
-                                     <tr>
-                                         <th scope="row">2</th>
-                                         <td>Danny</td>
-                                         <td>Collins</td>
-                                         <td>@dennis</td>
-                                         <td>
-                                             <a class="blue-text"><i class="fa fa-user"></i></a>
-                                             <a class="teal-text"><i class="fa fa-pencil"></i></a>
-                                             <a class="red-text"><i class="fa fa-times"></i></a>
-                                         </td>
-                                     </tr>
-                                     <tr>
-                                         <th scope="row">3</th>
-                                         <td>Clara</td>
-                                         <td>Ericson</td>
-                                         <td>@claris</td>
-                                         <td>
-                                             <a class="blue-text"><i class="fa fa-user"></i></a>
-                                             <a class="teal-text"><i class="fa fa-pencil"></i></a>
-                                             <a class="red-text"><i class="fa fa-times"></i></a>
-                                         </td>
-                                     </tr>
+                        <div class="row reservation-wrapper">
+                            <div class="reservation-details col-md-5">
+                                <div class="content">
+                                    <h4>Reservation Details</h4>
+                                </div>
+                                <div class="row-details">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-3">
+                                            <label for="data-date">date</label>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <input type="text" value="Wed, Jun 16" id="data-date">
+                                        </div>
+                                        <div class="actions col-md-3 col-xs-4">
+                                            <a href="javascript:void(0);" class="btn btn-round btn-prev"></a>
+                                            <a href="javascript:void(0);" class="btn btn-round btn-next"></a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                     </tbody>
-                                 </table>
-                             </div>
+                                <div class="row-details">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-3">
+                                            <label for="data-time">time</label>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <input type="text" value="11" id="data-time">
+                                        </div>
+                                        <div class="actions col-md-3 col-xs-4">
+                                            <a href="javascript:void(0);" class="btn btn-round btn-prev"></a>
+                                            <a href="javascript:void(0);" class="btn btn-round btn-next"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-details">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-3">
+                                            <label for="data-covers">covers</label>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <input type="number" value="11" id="data-covers">
+                                        </div>
+                                        <div class="actions col-md-3 col-xs-4">
+                                            <a href="javascript:void(0);" class="btn btn-round btn-prev"></a>
+                                            <a href="javascript:void(0);" class="btn btn-round btn-next"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-details">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-3">
+                                            <label for="data-tat">tat</label>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <input type="text" value="1:30h" id="data-tat">
+                                        </div>
+                                        <div class="actions col-md-3 col-xs-4">
+                                            <a href="javascript:void(0);" class="btn btn-round btn-prev"></a>
+                                            <a href="javascript:void(0);" class="btn btn-round btn-next"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-details">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-2">
+                                            <label for="data-notes">notes</label>
+                                        </div>
+                                        <div class="col-md-9 col-xs-10">
+                                            <textarea id="data-notes" cols="30" rows="4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, ut?</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-details">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <label>origin</label>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div class="btn-group btn-group-sm" data-toggle="buttons">
+                                                <label class="btn btn-primary active">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> phone
+                                                </label>
+                                                <label class="btn btn-primary">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off"> In-person
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-details  col-md-7">
+                                <div class="content">
+                                    <h4>Table Details</h4>
+                                    <span id="total-tables">23 tables available</span>
+                                </div>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>section</th>
+                                        <th>type</th>
+                                        <th>min</th>
+                                        <th>max</th>
+                                        <th>blocked</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">3a</th>
+                                        <td>patio</td>
+                                        <td>private dining</td>
+                                        <td>2</td>
+                                        <td>4</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3b</th>
+                                        <td>patio</td>
+                                        <td>private dining</td>
+                                        <td>2</td>
+                                        <td>4</td>
+                                        <td>VIP</td>
+                                    </tr>
+                                    <tr class="active">
+                                        <th scope="row">4</th>
+                                        <td>ground floor</td>
+                                        <td>VIP only</td>
+                                        <td>4</td>
+                                        <td>12</td>
+                                        <td>Owner <a href="javascript:void(0);" class="remove-row"
+                                                     onclick="removeOwnRow();">remove</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5a</th>
+                                        <td>ground floor</td>
+                                        <td>VIP only</td>
+                                        <td>4</td>
+                                        <td>12</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5b</th>
+                                        <td>ground floor</td>
+                                        <td>open table</td>
+                                        <td>4</td>
+                                        <td>15</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">13</th>
+                                        <td>Terrace</td>
+                                        <td>open table</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        <td>VIP</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default">reset</button>
                         <button type="button" class="btn btn-primary">create reservation</button>
                     </div>
-            </div>
+                </div>
                 <div class="tab-pane" id="walk-in-content">
                     <div class="modal-body">
                         ...

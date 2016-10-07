@@ -1,0 +1,85 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  thead {
+    tr {
+      height: 50px;
+      color: #bababa;
+      text-transform: capitalize;
+        th {
+          font-weight: 200;
+          border-bottom: 0 !important;
+          line-height: 40px !important;
+        }
+    }
+  }
+  tbody {
+    tr {
+      background-color: $row-bg-color;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      td, th {
+        border-top: 0 !important;
+        text-transform: capitalize;
+        @media (max-width: 749px) {
+          padding: 17px 2px !important;
+          font-size: 12px !important;
+        }
+      }
+      th {
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $active-color;
+        @media (min-width: 750px) {
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+        }
+        padding-left: 12px !important;
+      }
+      td {
+        position: relative;
+        height: 40px;
+        line-height: 20px;
+        &:last-child {
+          @media (min-width: 750px) {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+          }
+        }
+        a {
+          &.remove-row {
+            position: absolute;
+            right: 2px;
+            text-indent: -9999em;
+            top:2px;
+            @media (max-width: 749px) {
+              top: 8px;
+            }
+            @media (max-width: 482px) {
+              right: -4px;
+              top: -5px;
+            }
+
+            &:after {
+              position: absolute;
+              content: '';
+              width: 35px;
+              height: 35px;
+              background: transparent url(#{$image-url}/sprite.svg) -156px -8px no-repeat;
+              background-size: 355px 192px;
+              right: 0;
+            }
+          }
+        }
+      }
+      &.active {
+        background-color: $bg-table-active-color !important;
+        td, th {
+            background-color: transparent !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

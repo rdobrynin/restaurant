@@ -1,0 +1,17 @@
+.table-details {
+  height: 100%;
+  padding: 0 15px;
+  @media (max-width: 749px) {
+    padding: 0;
+  }
+  position: relative;
+  border-left: 1px solid #e5e5e5;
+  #total-tables {
+    position: absolute;
+    right: 25px;
+    top: 24px;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    font-weight: 600;
+  }
+}

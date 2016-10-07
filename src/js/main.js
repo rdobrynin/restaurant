@@ -6,4 +6,7 @@ define(['jquery', 'modalWindow', 'reservationDetails', 'moduleTwo'], function($,
         moduleTwo = new ModuleTwo();
         return modalWindow;
     });
+
+
+
 });

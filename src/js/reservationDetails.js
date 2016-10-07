@@ -9,7 +9,7 @@ define(['jquery', 'modalWindow'], function($, modalWindow) {
         }
 
         function ReservationDetails() {
-            console.log('reservationDetails111');
+            console.log('reservationDetails');
         }
 
         return init;

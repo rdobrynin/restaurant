@@ -1,0 +1,11 @@
+textarea {
+  resize: none !important;
+  background-color: transparent;
+}
+
+
+input, textarea {
+  border: 0 !important;
+  &:focus {}
+  outline: none !important;
+}

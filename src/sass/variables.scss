@@ -2,11 +2,15 @@
 $bg-color: #0bb3b6;
 $active-color: #0070c9;
 $border-color: #f6f7fa;
+$row-bg-color: $border-color;
 $bold-text-color: #2f323a;
 $disabled-text-color: #cacaca;
 $light-gray-color: #c7cad2;
 $bg-table-color: #f6f7fa;
 $bg-table-active-color: #50c14e;
+
+// path
+$image-url: '../../images';
 
 // fonts
 $default-font-family: 'Lato', sans-serif;

@@ -1,6 +1,9 @@
 .modal{
   .modal-dialog {
-    width: 1100px;
+    @media (min-width: 1200px) {
+      width: 1100px;
+    }
+    width: 95%;
     .modal-content {
       height: auto;
       @include box-shadow(0 5px 15px rgba(0,0,0,.2));
@@ -8,181 +11,23 @@
       -webkit-border-radius: 8px;
       -moz-border-radius: 8px;
       border-radius: 8px;
-      .modal-header {
-        padding: 30px 25px 25px 25px;
-        a {
-          color: #2b81e6;
-          text-decoration: none;
-          font-weight: 400;
-          text-transform: capitalize;
-          font-size: 16px;
-        }
-        .close-button {
-          height: 25px;
-          width: 25px;
-          position: absolute;
-          box-sizing: border-box;
-          display: inline-block;
-          top: 30px;
-          right: 30px;
-          &:after {
-            transform: rotate(45deg);
-            width: 28px;
-            height: 1px;
-            content: '';
-            position: absolute;
-            top: 11px;
-            left: -1px;
-            margin-top: -5;
-            margin-left: -25;
-            display: block;
-            transition: all 0.2s ease-out;
-            background-color: #b5bbce;
-          }
-          &:before {
-            width: 28px;
-            height: 1px;
-            transform: rotate(-45deg);
-            content: '';
-            position: absolute;
-            top: 11px;
-            left: -1px;
-            margin-top: -5;
-            margin-left: -25;
-            display: block;
-            transition: all 0.2s ease-out;
-            background-color: #b5bbce;
-          }
-
-        }
-        .nav-tabs {
-          position: absolute;
-          left: 420px;
-          top: 0;
-          border-bottom: 0;
-          li {
-            margin-bottom: 0;
-            a {
-              text-transform: capitalize;
-              color: $disabled-text-color;
-              font-size: 16px;
-              line-height: 50px;
-              border: 0;
-              padding: 10px 0;
-              margin:0 15px;
-              top: 6px;
-              &:hover {
-                background-color: transparent;
-                color: $active-color;
-              }
-            }
-            &.active {
-              a {
-                color: $bold-text-color !important;
-                font-weight: 400;
-                border-bottom: 3px solid $active-color;
-              ;
-              }
-            }
-          }
-        }
-      }
       .modal-body {
         padding: 0;
-        .search {
-          padding: 15px;
-        }
         .reservation-wrapper {
           border-top: 1px solid #e5e5e5;
-          height: 400px;
+          background-color: #fff;
+          margin: 0;
           h4 {
             margin-top: 0;
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
-            line-height: 1.5;
-          }
-          .reservation-details {
-            width: 410px;
-            float: left;
-            height: 100%;
-            position: relative;
-            border-right: 1px solid #e5e5e5;
-          }
-          .table-details {
-            float: left;
-            width: 688px;
-            height: 100%;
-            position: relative;
+            line-height: 2;
           }
           .content {
-            padding: 25px;
+            padding: 20px 20px 0 20px;
           }
         }
-      }
-    }
-    .modal-footer {
-      background-color: $bg-table-color;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-      border-top: 0;
-      padding: 20px 25px;
-      .btn {
-        border-color: #dedede;
-        border-width: 2px;
-        color: $disabled-text-color;
-        &.btn-primary {
-          background-color: #fff;
-          color: $active-color;
-        }
-      }
-
-    }
-
-    .search {
-      &:after {
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 30px;
-        background: transparent url(../../images/search.png) 4px 3px no-repeat;
-        background-size: 24px 24px;
-        left: 20px;
-        top: 14px;
-      }
-      input[type="text"] {
-        width: 90%;
-        line-height: 25px;
-        padding-left: 45px;
-        border: 0;
-        font-size: 16px;
-        &:focus {
-          box-shadow: none;
-          outline: none;
-        }
-      }
-      ::-webkit-input-placeholder {
-        color: #d6d6d6;
-        font-size: 18px;
-        font-weight: 200;
-      }
-
-      :-moz-placeholder { /* Firefox 18- */
-        color: #d6d6d6;
-        font-size: 18px;
-        font-weight: 200;
-      }
-
-      ::-moz-placeholder {  /* Firefox 19+ */
-        color: #d6d6d6;
-        font-size: 18px;
-        font-weight: 200;
-      }
-
-      :-ms-input-placeholder {
-        color: #d6d6d6;
-        font-size: 18px;
-        font-weight: 200;
       }
     }
   }
