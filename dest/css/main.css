@@ -5940,7 +5940,7 @@ label.btn.btn-primary {
           text-transform: uppercase;
           line-height: 2; }
         .modal .modal-dialog .modal-content .modal-body .reservation-wrapper .content {
-          padding: 20px 20px 0 20px; }
+          padding: 20px 20px 0 25px; }
 
 .modal-backdrop {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#06a9c3+0,0db7ae+47,06a9c3+100 */
@@ -6070,22 +6070,33 @@ label.btn.btn-primary {
       outline: none; }
   .search ::-webkit-input-placeholder {
     color: #d6d6d6;
-    font-size: 18px;
     font-weight: 200; }
+    @media (max-width: 749px) {
+      .search ::-webkit-input-placeholder {
+        font-size: 16px; } }
   .search :-moz-placeholder {
     /* Firefox 18- */
     color: #d6d6d6;
     font-size: 18px;
     font-weight: 200; }
+    @media (max-width: 749px) {
+      .search :-moz-placeholder {
+        font-size: 16px; } }
   .search ::-moz-placeholder {
     /* Firefox 19+ */
     color: #d6d6d6;
     font-size: 18px;
     font-weight: 200; }
+    @media (max-width: 749px) {
+      .search ::-moz-placeholder {
+        font-size: 16px; } }
   .search :-ms-input-placeholder {
     color: #d6d6d6;
     font-size: 18px;
     font-weight: 200; }
+    @media (max-width: 749px) {
+      .search :-ms-input-placeholder {
+        font-size: 14px; } }
 
 .reservation-details {
   height: 100%;
@@ -6093,7 +6104,7 @@ label.btn.btn-primary {
   position: relative; }
   .reservation-details .row-details {
     border-bottom: 1px solid #e5e5e5;
-    padding: 10px 20px 10px 20px; }
+    padding: 10px 20px 10px 25px; }
     .reservation-details .row-details label {
       font-weight: 300;
       text-transform: capitalize; }
@@ -6118,20 +6129,30 @@ label.btn.btn-primary {
     font-weight: 600; }
 
 .filter, .sort {
-  height: 100%;
   padding: 15px 22px;
   position: relative;
-  border-top: 1px solid #e5e5e5;
   border-left: 1px solid #e5e5e5; }
   .filter .title, .sort .title {
     padding-right: 15px; }
 
+.sort {
+  border-left: 1px solid #e5e5e5;
+  height: 50px; }
+
 .filter {
-  border-bottom: 1px solid #e5e5e5; }
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  height: 52px; }
 
 .sort span {
   margin-right: 90px;
   text-transform: capitalize; }
+  @media (max-width: 560px) {
+    .sort span {
+      margin-right: 38px; } }
+  @media (max-width: 400px) {
+    .sort span {
+      margin-right: 20px; } }
   .sort span a.sort-trigger {
     top: 23px;
     position: absolute;
@@ -6203,6 +6224,10 @@ table {
         table tbody tr td:last-child {
           border-top-right-radius: 6px;
           border-bottom-right-radius: 6px; } }
+      @media (min-width: 750px) {
+        table tbody tr td:first-child {
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px; } }
       table tbody tr td a.remove-row {
         position: absolute;
         right: 2px;

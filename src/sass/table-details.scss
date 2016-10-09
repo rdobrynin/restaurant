@@ -17,23 +17,34 @@
 }
 
 .filter, .sort {
-  height: 100%;
   padding: 15px 22px;
   position: relative;
-  border-top: 1px solid #e5e5e5;
   border-left: 1px solid #e5e5e5;
   .title {
     padding-right: 15px;
   }
 }
 
+.sort {
+  border-left: 1px solid #e5e5e5;
+  height: 50px;
+}
+
 .filter {
+  border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+  height: 52px;
 }
 
 .sort {
   span {
     margin-right: 90px;
+    @media (max-width: 560px) {
+      margin-right: 38px;
+    }
+    @media (max-width: 400px) {
+      margin-right: 20px;
+    }
     text-transform: capitalize;
     a {
       &.sort-trigger {

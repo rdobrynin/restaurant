@@ -61,7 +61,7 @@
                                             <label for="data-time">time</label>
                                         </div>
                                         <div class="col-md-6 col-xs-5">
-                                            <input type="text" value="11" id="data-time">
+                                            <input type="text" value="08:15PM" id="data-time">
                                         </div>
                                         <div class="actions col-md-3 col-xs-4">
                                             <a href="javascript:void(0);" class="btn btn-round btn-prev"></a>
@@ -75,7 +75,7 @@
                                             <label for="data-covers">covers</label>
                                         </div>
                                         <div class="col-md-6 col-xs-5">
-                                            <input type="number" value="11" id="data-covers">
+                                            <input type="text" value="11" id="data-covers">
                                         </div>
                                         <div class="actions col-md-3 col-xs-4">
                                             <a href="javascript:void(0);" class="btn btn-round btn-prev"></a>
@@ -128,13 +128,13 @@
                             <div class="table-details  col-md-7">
                                 <div class="content">
                                     <h4>Table Details</h4>
-                                    <span id="total-tables">23 tables available</span>
+                                    <span id="total-tables"><span id="rows-count"></span> tables available</span>
                                 </div>
                             </div>
                             <div class="sort col-md-7">
-                                <span>section&nbsp;<a href="javascript:void(0);" class="sort-trigger up">sort</a></span>
-                                <span>table type&nbsp;<a href="javascript:void(0);" class="sort-trigger up">sort</a></span>
-                                <span>table #&nbsp;<a href="javascript:void(0);" class="sort-trigger down">sort</a></span>
+                                <span>section&nbsp;<a href="javascript:void(0);" onclick="sortData(true, 'section', 'content-table', this);" class="sort-trigger up">sort</a></span>
+                                <span>table type&nbsp;<a href="javascript:void(0);" onclick="sortData(true, 'type', 'content-table', this);"  class="sort-trigger up">sort</a></span>
+                                <span>table #&nbsp;<a href="javascript:void(0);" onclick="sortData(true, 'id', 'content-table', this);"  class="sort-trigger up">sort</a></span>
                             </div>
                             <div class="filter col-md-7">
                                 <span class="title">Apply filters</span>
@@ -142,69 +142,63 @@
                                 <span class="label label-primary">Cool&nbsp;<a href="javascript:void(0);" class="remove-filter"></a></span>
                             </div>
                                 <div class="table-details  col-md-7">
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>section</th>
-                                        <th>type</th>
-                                        <th>min</th>
-                                        <th>max</th>
-                                        <th>blocked</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">3a</th>
-                                        <td>patio</td>
-                                        <td>private dining</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3b</th>
-                                        <td>patio</td>
-                                        <td>private dining</td>
-                                        <td>2</td>
-                                        <td>4</td>
-                                        <td>VIP</td>
-                                    </tr>
-                                    <tr class="active">
-                                        <th scope="row">4</th>
-                                        <td>ground floor</td>
-                                        <td>VIP only</td>
-                                        <td>4</td>
-                                        <td>12</td>
-                                        <td>Owner <a href="javascript:void(0);" class="remove-row"
-                                                     onclick="removeOwnRow();">remove</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5a</th>
-                                        <td>ground floor</td>
-                                        <td>VIP only</td>
-                                        <td>4</td>
-                                        <td>12</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5b</th>
-                                        <td>ground floor</td>
-                                        <td>open table</td>
-                                        <td>4</td>
-                                        <td>15</td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">13</th>
-                                        <td>Terrace</td>
-                                        <td>open table</td>
-                                        <td>1</td>
-                                        <td>4</td>
-                                        <td>VIP</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+
+
+                                    <table class="table" id="content-table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>section</th>
+                                            <th>type</th>
+                                            <th>min</th>
+                                            <th>max</th>
+                                            <th>blocked</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="id">3b</td>
+                                            <td class="section">patio</td>
+                                            <td class="type">private dining</td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>VIP</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="id">3a</td>
+                                            <td class="section">patio</td>
+                                            <td class="type">private dining</td>
+                                            <td>2</td>
+                                            <td>4</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr class="active">
+                                            <td class="id">4</td>
+                                            <td class="section">ground floor</td>
+                                            <td class="type">VIP only</td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td>Owner <a href="javascript:void(0);" class="remove-row" onclick="removeOwnRow();">remove</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="id">5a</td>
+                                            <td class="section">ground floor</td>
+                                            <td class="type">VIP only</td>
+                                            <td>4</td>
+                                            <td>12</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="id">5b</td>
+                                            <td class="section">ground floor</td>
+                                            <td class="type">open table</td>
+                                            <td>4</td>
+                                            <td>15</td>
+                                            <td>-</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
                             </div>
                         </div>
                     </div>
@@ -226,5 +220,81 @@
     </div>
 </div>
 <script data-main="dest/js/main.min.js" src="bower_components/requirejs/require.js"></script>
+<script>
+    <!-- calculate rows-->
+    var rowsCount = document.getElementById('content-table').rows[0].cells.length -1;
+    document.getElementById('rows-count').innerText = rowsCount;
+    function sortData(ascending, columnClassName, tableId, _this) {
+        if (hasClass(_this, 'up')) {
+            ascending = true;
+            console.log(ascending);
+        }
+       if (hasClass(_this, 'down')) {
+            ascending = false;
+        }
+        var tbody = document.getElementById(tableId).getElementsByTagName("tbody")[0];
+        var rows = tbody.getElementsByTagName("tr");
+
+        var unsorted = true;
+
+        while (unsorted) {
+            unsorted = false;
+
+            for (var r = 0; r < rows.length - 1; r++) {
+                var row = rows[r];
+                var nextRow = rows[r + 1];
+                var value = row.getElementsByClassName(columnClassName)[0].innerHTML;
+                var nextValue = nextRow.getElementsByClassName(columnClassName)[0].innerHTML;
+
+                value = value.replace(',', '');
+                nextValue = nextValue.replace(',', '');
+
+                if (!isNaN(value)) {
+                    value = parseFloat(value);
+                    nextValue = parseFloat(nextValue);
+                }
+
+
+                if (ascending ? value > nextValue : value < nextValue) {
+                    if(ascending == true) {
+                        var el = _this;
+                        addClass(el, 'down');
+                        removeClass(el, 'up');
+                    }
+                    else {
+                        el = _this;
+                        addClass(el, 'up');
+                        removeClass(el, 'down');
+                    }
+                    tbody.insertBefore(nextRow, row);
+                    unsorted = true;
+                }
+            }
+        }
+
+        function addClass(el, className) {
+            if (el.classList)
+                el.classList.add(className);
+            else if (!hasClass(el, className)) el.className += " " + className
+        }
+
+        function removeClass(el, className) {
+            if (el.classList)
+                el.classList.remove(className);
+            else if (hasClass(el, className)) {
+                var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+                el.className=el.className.replace(reg, ' ')
+            }
+        }
+
+        function hasClass(el, className) {
+            if (el.classList)
+                return el.classList.contains(className);
+            else
+                return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+        }
+    }
+
+</script>
 </body>
 </html>

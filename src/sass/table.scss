@@ -47,6 +47,12 @@ table {
             border-bottom-right-radius: 6px;
           }
         }
+        &:first-child {
+          @media (min-width: 750px) {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+          }
+        }
         a {
           &.remove-row {
             position: absolute;
